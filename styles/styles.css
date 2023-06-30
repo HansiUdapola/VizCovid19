@@ -1,0 +1,192 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html,body{
+	background-color:black;
+	margin:0;
+	padding:10 px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Nav */
+
+.topnav{
+	position:relative;
+	padding:10px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:3;
+}
+
+.sticky + .container-xxl{
+  padding-top: 80px;
+}
+
+.topnav img{
+	width:50px;
+	float:left;
+	margin-left:5px;
+	margin-right:5px;
+	padding:5px;
+}
+
+/* colors */
+
+.primaryColor{
+	color:white;
+}
+
+.secondaryColor{
+	background-color:rgb(13, 13, 14);
+}
+
+.primaryBColor{
+	background-color:#2e2929;
+}
+
+.color1{
+	color:#c9bec5;
+}
+
+.deaths{
+	background-color: rgb(203, 24, 29);
+	color:white;
+}
+
+.cases{
+	background-color: rgb(33, 113, 181);
+	color:white;
+}
+
+.vaccine{
+	background-color: rgb(35, 139, 69);
+	color:white;
+}
+
+h1.center{ text-align:center;}
+
+
+.side {
+  width: 20%;
+  float: left;
+  clear:right;
+  padding: 15px;
+  text-align:left;
+}
+
+.main {
+  width: 80%;
+  float: left;
+  padding: 15px;
+}
+
+/*scatter and bar section */
+
+.barback{
+	clear:both;
+	background-color:black;
+	color:white;
+}
+
+.myCircle:hover {
+  stroke: black;
+}
+
+.axisWhite line{
+  stroke: white;
+}
+
+.axisWhite path{
+  stroke: white;
+}
+
+.axisWhite text{
+  fill: white;
+}
+
+#scattor .tooltip{
+  position: absolute;
+  text-align: left;
+  padding: 5px;
+  color:black;
+  background: rgb(191, 208, 230);
+  pointer-events: none;
+  font-size: 12px;
+}
+
+
+#countrDcases, #countrDdeaths{
+  font-size: 100%;
+  color:white;
+}
+
+.table h4{
+  font-size: 200%;
+  padding: 5px;
+}
+
+/* Card view */
+.pointer {cursor: pointer;}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  z-index:0;
+  text-align:left;
+  padding-top:10px;
+  
+}
+
+.card h6{
+	font-size:18px; 
+	font-weight:normal
+}
+
+.card:hover {
+  box-shadow: 0 2px 4px 0 rgb(155, 152, 152);
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+.cardcontent {
+  padding: 2px 16px;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  [class*="col-"], .main, .side {
+    width: 100%;
+  }
+}
