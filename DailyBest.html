@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Styles -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link href="styles/styles.css" rel="stylesheet">
+	<link href="styles/live.css" rel="stylesheet">
+	<link href="styles/bubble.css" rel="stylesheet">
+
+	<!-- Load d3.js -->
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+
+
+
+	<!--Data Tables Addon-->
+	<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+
+
+	<style>
+
+	</style>
+</head>
+
+<body onload="createBestCountryTable()">
+
+	<!-- Nav bar Section -->
+	<div class="topnav sticky secondaryColor">
+		<img src="images/virus.png" />
+		<h2 class="display-7 primaryColor"> Viz-COVID19 <span class="display-6" style="font-size:60%"> Covid-19
+				Visualization Dashboard <span> <b class="text-danger Blink">Live &#11044;</b></h2>
+
+		<h5 class="display-7 primaryColor d-flex flex-row-reverse" id="date"></h5>
+
+
+	</div>
+
+
+	<div id="container" class="container-xxl">
+
+		<div class="row">
+			<h5 class="" style="color: aliceblue; text-align: center;padding-top: 1cm;"> Overview Performance of
+				Countries </h5>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="card text-white mb-3" style="max-width: 18rem;background-color: #FFC300;">
+					<div class="card-header">Lowest Cases (PMP)</div>
+					<div class="card-body">
+						<h5 class="card-title" id="lowest-cases-country"></h5>
+						<!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card text-white mb-3" style="max-width: 18rem;background-color: #ff9900;">
+					<div class="card-header">Highest Cases (PMP)</div>
+					<div class="card-body">
+						<h5 class="card-title" id="highest-cases-country">Primary card title</h5>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+				<div class="card text-white mb-3" style="max-width: 18rem; background-color: #FF5733;">
+					<div class="card-header">Lowest Deaths (PMP)</div>
+					<div class="card-body">
+						<h5 class="card-title" id="lowest-deaths-country">Primary card title</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card text-white mb-3" style="max-width: 18rem;background-color: #C70039;">
+					<div class="card-header">Highest Deaths (PMP)</div>
+					<div class="card-body">
+						<h5 class="card-title" id="highest-deaths-country">Primary card title</h5>
+
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<div class="col-6">
+					<h5 class="" style="color: aliceblue; text-align: center;">CUMULATIVE DEATHS AND CASES REPORTED FOR
+						EACH CONTINENTS (PMP)</h5>
+					<div id="my_dataviz"></div>
+				</div>
+				<div class="col-6">
+					<h5 class="" style="color: aliceblue; text-align: center;">NUMBER OF NEW DEATHS AND CASES REPORTED
+						FOR EACH OF THE CONTINENTS</h5>
+					<div id="daily-continent-plot"></div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<script src="scripts/BestCountry.js"></script>
+				<script src="scripts/ContinentCases.js"></script>
+				<script src="scripts/DailyContinentCases.js"></script>
+				<script src="scripts/Bubble.js"></script>
+				<h5 class="" style="color: aliceblue; text-align: center;margin-top: 55px;">VACCINATION OVER THE PER
+					CAPITA AND TOTAL DEATHS
+				</h5>
+				<div id="bubble-plot"></div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+</body>
+
+</html>
